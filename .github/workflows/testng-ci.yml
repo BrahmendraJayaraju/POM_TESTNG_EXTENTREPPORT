@@ -1,4 +1,4 @@
-name:  CI – Selenium pom Framework with extent report 
+name: Selenium pom Framework with extent report 
 
 permissions:
   contents: write
