@@ -1,0 +1,108 @@
+name:  CI – Selenium pom Framework with extent report 
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+      - actitimePOM
+  pull_request:
+    branches:
+      - actitimePOM
+  workflow_dispatch:
+  schedule:
+    - cron: '0 10 * * *'
+
+jobs:
+  testng-tests:
+    name: Run TestNG Automation Tests
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Verify Java
+        run: java -version
+
+      - name: Verify Maven
+        run: mvn -version
+
+      # Install Google Chrome
+	  - name: Download and install Google Chrome
+	    run: |
+	      curl -L -o chrome.msi https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi
+	      msiexec /i chrome.msi /qn /norestart
+
+
+      # Verify Chrome installation
+      - name: Check Chrome version
+        shell: pwsh
+        run: |
+          $chromePath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+          if (Test-Path $chromePath) {
+            & $chromePath --version
+          } else {
+            Write-Host "Chrome not found!"
+            exit 1
+          }
+
+      # Install matching ChromeDriver
+      - name: Install ChromeDriver
+        uses: nanasess/setup-chromedriver@v1
+        with:
+          chrome-version: latest
+
+      # Execute TestNG tests
+      - name: Execute TestNG Suite
+        run: mvn clean test
+
+      # Upload TestNG reports
+      - name: Upload TestNG Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: testng-report
+          path: test-output
+
+      # Upload Extent Reports (if generated)
+      - name: Upload Extent Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: extent-report
+          path: |
+            **/extent-report
+            **/ExtentReports
+            **/extent.html
+
+  publish-report:
+    name: Publish TestNG Report to GitHub Pages
+    needs: testng-tests
+    runs-on: windows-latest
+    if: always()
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download TestNG Report
+        uses: actions/download-artifact@v4
+        with:
+          name: testng-report
+          path: Project_Report
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: test-output
+          force_orphan: true

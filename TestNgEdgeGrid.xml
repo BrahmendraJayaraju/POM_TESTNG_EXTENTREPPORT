@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Suite1"   parallel="tests" thread-count="10">
+  
+ 
+  <!--Execution with EdgeDriver-->
+  
+  <parameter name="Browser" value="MicrosoftEdge"></parameter>
+   <test name="InternetEdge"  > 
+  
+  <parameter name="portNo" value="5556"></parameter>
+ 
+<classes>
+      <class name="Testclass."/>    
+    </classes>
+  </test> 
+  
+  <test   name=""  >
+<parameter name="portNo" value="5556"></parameter>
+<classes>
+<class name="Testclass."></class>
+</classes>
+</test>
+  
+  
+  
+  
+  
+  </suite>
+  
+  
+ 

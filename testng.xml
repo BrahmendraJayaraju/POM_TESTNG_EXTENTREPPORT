@@ -1,0 +1,20 @@
+<suite name="Actitime Automation Suite"
+       verbose="1"
+       parallel="false">
+
+    <parameter name="browsername" value="chrome"/>
+
+
+    <test name="login">
+        <classes>
+            <class name="testclass.TestLogin"/>      
+                 <class name="testclass.Testlogout"/>
+           
+                
+        </classes>
+    </test>
+
+</suite>
+
+
+

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-02-12T00:26:34 GMT-05:00" name="Actitime Automation Suite" finished-at="2026-02-12T00:26:39 GMT-05:00" duration-ms="5226">
+    <groups>
+      <group name="Regression">
+        <method signature="TestLogin.TC46043_verifyInvalidLoginFunctionality()[pri:0, instance:testclass.TestLogin@23348b5d]" name="TC46043_verifyInvalidLoginFunctionality" class="testclass.TestLogin"/>
+        <method signature="Testlogout.TC46044_verifyLogoutFunctionality()[pri:0, instance:testclass.Testlogout@2002fc1d]" name="TC46044_verifyLogoutFunctionality" class="testclass.Testlogout"/>
+        <method signature="TestLogin.TC46042_verifyValidLoginFunctionality()[pri:1, instance:testclass.TestLogin@23348b5d]" name="TC46042_verifyValidLoginFunctionality" class="testclass.TestLogin"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test started-at="2026-02-12T00:26:34 GMT-05:00" name="login" finished-at="2026-02-12T00:26:39 GMT-05:00" duration-ms="5226">
+      <class name="testclass.Testlogout">
+        <test-method is-config="true" signature="setupPages()[pri:0, instance:testclass.Testlogout@2002fc1d]" started-at="2026-02-12T00:26:39 GMT-05:00" name="setupPages" finished-at="2026-02-12T00:26:39 GMT-05:00" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupPages -->
+        <test-method signature="TC46044_verifyLogoutFunctionality()[pri:0, instance:testclass.Testlogout@2002fc1d]" started-at="2026-02-12T00:26:39 GMT-05:00" name="TC46044_verifyLogoutFunctionality" finished-at="2026-02-12T00:26:39 GMT-05:00" duration-ms="476" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC46044_verifyLogoutFunctionality -->
+        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:testclass.Testlogout@2002fc1d]" started-at="2026-02-12T00:26:39 GMT-05:00" name="PostConditionTestStatus" finished-at="2026-02-12T00:26:39 GMT-05:00" duration-ms="58" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC46044_verifyLogoutFunctionality status=SUCCESS method=Testlogout.TC46044_verifyLogoutFunctionality()[pri:0, instance:testclass.Testlogout@2002fc1d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PostConditionTestStatus -->
+        <test-method is-config="true" signature="addToReport()[pri:0, instance:testclass.Testlogout@2002fc1d]" started-at="2026-02-12T00:26:39 GMT-05:00" name="addToReport" finished-at="2026-02-12T00:26:39 GMT-05:00" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToReport -->
+      </class> <!-- testclass.Testlogout -->
+      <class name="testclass.TestLogin">
+        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:testclass.TestLogin@23348b5d]" started-at="2026-02-12T00:26:29 GMT-05:00" name="beforeSuite" finished-at="2026-02-12T00:26:34 GMT-05:00" duration-ms="5029" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="setupPages()[pri:0, instance:testclass.TestLogin@23348b5d]" started-at="2026-02-12T00:26:34 GMT-05:00" name="setupPages" finished-at="2026-02-12T00:26:34 GMT-05:00" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupPages -->
+        <test-method signature="TC46043_verifyInvalidLoginFunctionality()[pri:0, instance:testclass.TestLogin@23348b5d]" started-at="2026-02-12T00:26:34 GMT-05:00" name="TC46043_verifyInvalidLoginFunctionality" finished-at="2026-02-12T00:26:36 GMT-05:00" duration-ms="2174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC46043_verifyInvalidLoginFunctionality -->
+        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:testclass.TestLogin@23348b5d]" started-at="2026-02-12T00:26:36 GMT-05:00" name="PostConditionTestStatus" finished-at="2026-02-12T00:26:37 GMT-05:00" duration-ms="305" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC46043_verifyInvalidLoginFunctionality status=SUCCESS method=TestLogin.TC46043_verifyInvalidLoginFunctionality()[pri:0, instance:testclass.TestLogin@23348b5d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PostConditionTestStatus -->
+        <test-method signature="TC46042_verifyValidLoginFunctionality()[pri:1, instance:testclass.TestLogin@23348b5d]" started-at="2026-02-12T00:26:37 GMT-05:00" name="TC46042_verifyValidLoginFunctionality" finished-at="2026-02-12T00:26:39 GMT-05:00" duration-ms="2083" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC46042_verifyValidLoginFunctionality -->
+        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:testclass.TestLogin@23348b5d]" started-at="2026-02-12T00:26:39 GMT-05:00" name="PostConditionTestStatus" finished-at="2026-02-12T00:26:39 GMT-05:00" duration-ms="78" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC46042_verifyValidLoginFunctionality status=SUCCESS method=TestLogin.TC46042_verifyValidLoginFunctionality()[pri:1, instance:testclass.TestLogin@23348b5d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PostConditionTestStatus -->
+        <test-method is-config="true" signature="addToReport()[pri:0, instance:testclass.TestLogin@23348b5d]" started-at="2026-02-12T00:26:39 GMT-05:00" name="addToReport" finished-at="2026-02-12T00:26:39 GMT-05:00" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToReport -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:testclass.TestLogin@23348b5d]" started-at="2026-02-12T00:26:39 GMT-05:00" name="closeDriver" finished-at="2026-02-12T00:26:39 GMT-05:00" duration-ms="114" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- testclass.TestLogin -->
+    </test> <!-- login -->
+  </suite> <!-- Actitime Automation Suite -->
+</testng-results>
