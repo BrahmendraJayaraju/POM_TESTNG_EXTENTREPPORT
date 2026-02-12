@@ -6,10 +6,10 @@ permissions:
 on:
   push:
     branches:
-      - actitimePOM
+      - master
   pull_request:
     branches:
-      - actitimePOM
+      - master
   workflow_dispatch:
   schedule:
     - cron: '0 10 * * *'
