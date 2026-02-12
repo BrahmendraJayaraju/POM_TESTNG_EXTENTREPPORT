@@ -1,4 +1,4 @@
-name: Selenium pom Framework with extent report 
+name: Selenium POM Framework with Extent Report
 
 permissions:
   contents: write
@@ -37,11 +37,10 @@ jobs:
         run: mvn -version
 
       # Install Google Chrome
-	  - name: Download and install Google Chrome
-	    run: |
-	      curl -L -o chrome.msi https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi
-	      msiexec /i chrome.msi /qn /norestart
-
+      - name: Download and install Google Chrome
+        run: |
+          curl -L -o chrome.msi https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi
+          msiexec /i chrome.msi /qn /norestart
 
       # Verify Chrome installation
       - name: Check Chrome version
