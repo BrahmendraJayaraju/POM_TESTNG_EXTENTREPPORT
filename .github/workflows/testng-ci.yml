@@ -16,7 +16,7 @@ on:
 
 jobs:
   testng-tests:
-    name: Run TestNG Automation Tests
+    name: Run Selenium + TestNG and Generate Extent Report
     runs-on: windows-latest
 
     steps:
@@ -54,58 +54,41 @@ jobs:
             exit 1
           }
 
-      # Install matching ChromeDriver
+      # Install ChromeDriver
       - name: Install ChromeDriver
         uses: nanasess/setup-chromedriver@v1
         with:
           chrome-version: latest
 
-      # Build dependent Maven project (if any)
-      - name: Build Testing1 dependency
-        run: mvn clean install -f path/to/Testing1/pom.xml
-
-      # Execute TestNG tests
+      # Run your TestNG suite (this generates the Extent report)
       - name: Execute TestNG Suite
-        run: mvn clean test
+        run: mvn -B clean test
 
-      # Upload TestNG reports
-      - name: Upload TestNG Report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: testng-report
-          path: test-output
-
-      # Upload Extent Reports (if generated)
+      # Upload ONLY Extent report
       - name: Upload Extent Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: extent-report
-          path: |
-            **/Project_Report
-            **/ExtentReports
-            **/extent.html
+          path: project_report
+
 
   publish-report:
-    name: Publish TestNG Report to GitHub Pages
+    name: Publish Extent Report to GitHub Pages
     needs: testng-tests
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     if: always()
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Download TestNG Report
+      - name: Download Extent Report
         uses: actions/download-artifact@v4
         with:
-          name: testng-report
-          path: Project_Report
+          name: extent-report
+          path: project_report
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: test-output
+          publish_dir: project_report
           force_orphan: true
