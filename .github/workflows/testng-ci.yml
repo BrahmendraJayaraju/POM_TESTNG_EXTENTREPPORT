@@ -60,6 +60,10 @@ jobs:
         with:
           chrome-version: latest
 
+      # Build dependent Maven project (if any)
+      - name: Build Testing1 dependency
+        run: mvn clean install -f path/to/Testing1/pom.xml
+
       # Execute TestNG tests
       - name: Execute TestNG Suite
         run: mvn clean test
