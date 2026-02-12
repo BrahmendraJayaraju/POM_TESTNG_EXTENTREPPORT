@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-12T00:52:04 GMT-05:00" name="Actitime Automation Suite" finished-at="2026-02-12T00:52:08 GMT-05:00" duration-ms="3999">
+  <suite started-at="2026-02-12T01:22:55 GMT-05:00" name="Actitime Automation Suite" finished-at="2026-02-12T01:23:00 GMT-05:00" duration-ms="4239">
     <groups>
       <group name="Regression">
         <method signature="TestLogin.TC46043_verifyInvalidLoginFunctionality()[pri:0, instance:testclass.TestLogin@37ceb1df]" name="TC46043_verifyInvalidLoginFunctionality" class="testclass.TestLogin"/>
@@ -10,17 +10,17 @@
         <method signature="TestLogin.TC46042_verifyValidLoginFunctionality()[pri:1, instance:testclass.TestLogin@37ceb1df]" name="TC46042_verifyValidLoginFunctionality" class="testclass.TestLogin"/>
       </group> <!-- Regression -->
     </groups>
-    <test started-at="2026-02-12T00:52:04 GMT-05:00" name="login" finished-at="2026-02-12T00:52:08 GMT-05:00" duration-ms="3999">
+    <test started-at="2026-02-12T01:22:55 GMT-05:00" name="login" finished-at="2026-02-12T01:23:00 GMT-05:00" duration-ms="4239">
       <class name="testclass.Testlogout">
-        <test-method is-config="true" signature="setupPages()[pri:0, instance:testclass.Testlogout@6f4a47c7]" started-at="2026-02-12T00:52:08 GMT-05:00" name="setupPages" finished-at="2026-02-12T00:52:08 GMT-05:00" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setupPages()[pri:0, instance:testclass.Testlogout@6f4a47c7]" started-at="2026-02-12T01:22:59 GMT-05:00" name="setupPages" finished-at="2026-02-12T01:22:59 GMT-05:00" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupPages -->
-        <test-method signature="TC46044_verifyLogoutFunctionality()[pri:0, instance:testclass.Testlogout@6f4a47c7]" started-at="2026-02-12T00:52:08 GMT-05:00" name="TC46044_verifyLogoutFunctionality" finished-at="2026-02-12T00:52:08 GMT-05:00" duration-ms="534" status="PASS">
+        <test-method signature="TC46044_verifyLogoutFunctionality()[pri:0, instance:testclass.Testlogout@6f4a47c7]" started-at="2026-02-12T01:22:59 GMT-05:00" name="TC46044_verifyLogoutFunctionality" finished-at="2026-02-12T01:23:00 GMT-05:00" duration-ms="539" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC46044_verifyLogoutFunctionality -->
-        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:testclass.Testlogout@6f4a47c7]" started-at="2026-02-12T00:52:08 GMT-05:00" name="PostConditionTestStatus" finished-at="2026-02-12T00:52:08 GMT-05:00" duration-ms="64" status="PASS">
+        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:testclass.Testlogout@6f4a47c7]" started-at="2026-02-12T01:23:00 GMT-05:00" name="PostConditionTestStatus" finished-at="2026-02-12T01:23:00 GMT-05:00" duration-ms="58" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -31,13 +31,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PostConditionTestStatus -->
-        <test-method is-config="true" signature="addToReport()[pri:0, instance:testclass.Testlogout@6f4a47c7]" started-at="2026-02-12T00:52:08 GMT-05:00" name="addToReport" finished-at="2026-02-12T00:52:08 GMT-05:00" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="addToReport()[pri:0, instance:testclass.Testlogout@6f4a47c7]" started-at="2026-02-12T01:23:00 GMT-05:00" name="addToReport" finished-at="2026-02-12T01:23:00 GMT-05:00" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToReport -->
       </class> <!-- testclass.Testlogout -->
       <class name="testclass.TestLogin">
-        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:testclass.TestLogin@37ceb1df]" started-at="2026-02-12T00:52:00 GMT-05:00" name="beforeSuite" finished-at="2026-02-12T00:52:04 GMT-05:00" duration-ms="4432" status="PASS">
+        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:testclass.TestLogin@37ceb1df]" started-at="2026-02-12T01:22:51 GMT-05:00" name="beforeSuite" finished-at="2026-02-12T01:22:55 GMT-05:00" duration-ms="4835" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -48,15 +48,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="setupPages()[pri:0, instance:testclass.TestLogin@37ceb1df]" started-at="2026-02-12T00:52:04 GMT-05:00" name="setupPages" finished-at="2026-02-12T00:52:04 GMT-05:00" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="setupPages()[pri:0, instance:testclass.TestLogin@37ceb1df]" started-at="2026-02-12T01:22:55 GMT-05:00" name="setupPages" finished-at="2026-02-12T01:22:55 GMT-05:00" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupPages -->
-        <test-method signature="TC46043_verifyInvalidLoginFunctionality()[pri:0, instance:testclass.TestLogin@37ceb1df]" started-at="2026-02-12T00:52:04 GMT-05:00" name="TC46043_verifyInvalidLoginFunctionality" finished-at="2026-02-12T00:52:05 GMT-05:00" duration-ms="796" status="PASS">
+        <test-method signature="TC46043_verifyInvalidLoginFunctionality()[pri:0, instance:testclass.TestLogin@37ceb1df]" started-at="2026-02-12T01:22:55 GMT-05:00" name="TC46043_verifyInvalidLoginFunctionality" finished-at="2026-02-12T01:22:56 GMT-05:00" duration-ms="929" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC46043_verifyInvalidLoginFunctionality -->
-        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:testclass.TestLogin@37ceb1df]" started-at="2026-02-12T00:52:05 GMT-05:00" name="PostConditionTestStatus" finished-at="2026-02-12T00:52:06 GMT-05:00" duration-ms="254" status="PASS">
+        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:testclass.TestLogin@37ceb1df]" started-at="2026-02-12T01:22:56 GMT-05:00" name="PostConditionTestStatus" finished-at="2026-02-12T01:22:57 GMT-05:00" duration-ms="334" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -67,11 +67,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PostConditionTestStatus -->
-        <test-method signature="TC46042_verifyValidLoginFunctionality()[pri:1, instance:testclass.TestLogin@37ceb1df]" started-at="2026-02-12T00:52:06 GMT-05:00" name="TC46042_verifyValidLoginFunctionality" finished-at="2026-02-12T00:52:08 GMT-05:00" duration-ms="2238" status="PASS">
+        <test-method signature="TC46042_verifyValidLoginFunctionality()[pri:1, instance:testclass.TestLogin@37ceb1df]" started-at="2026-02-12T01:22:57 GMT-05:00" name="TC46042_verifyValidLoginFunctionality" finished-at="2026-02-12T01:22:59 GMT-05:00" duration-ms="2252" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC46042_verifyValidLoginFunctionality -->
-        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:testclass.TestLogin@37ceb1df]" started-at="2026-02-12T00:52:08 GMT-05:00" name="PostConditionTestStatus" finished-at="2026-02-12T00:52:08 GMT-05:00" duration-ms="58" status="PASS">
+        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:testclass.TestLogin@37ceb1df]" started-at="2026-02-12T01:22:59 GMT-05:00" name="PostConditionTestStatus" finished-at="2026-02-12T01:22:59 GMT-05:00" duration-ms="66" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -82,11 +82,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PostConditionTestStatus -->
-        <test-method is-config="true" signature="addToReport()[pri:0, instance:testclass.TestLogin@37ceb1df]" started-at="2026-02-12T00:52:08 GMT-05:00" name="addToReport" finished-at="2026-02-12T00:52:08 GMT-05:00" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="addToReport()[pri:0, instance:testclass.TestLogin@37ceb1df]" started-at="2026-02-12T01:22:59 GMT-05:00" name="addToReport" finished-at="2026-02-12T01:22:59 GMT-05:00" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToReport -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:testclass.TestLogin@37ceb1df]" started-at="2026-02-12T00:52:08 GMT-05:00" name="closeDriver" finished-at="2026-02-12T00:52:09 GMT-05:00" duration-ms="115" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:testclass.TestLogin@37ceb1df]" started-at="2026-02-12T01:23:00 GMT-05:00" name="closeDriver" finished-at="2026-02-12T01:23:00 GMT-05:00" duration-ms="112" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
