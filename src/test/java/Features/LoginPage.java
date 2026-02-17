@@ -10,7 +10,7 @@ public class LoginPage extends WebUtilityKeys {
 
     public LoginPage enterUsername(String element, String text) {
 
-        this.webEnterText_ById(element, text);
+        this.webEnterText_ByXpath(element, text);
         
         captureStep("Entered Username");
         return this;
@@ -19,20 +19,31 @@ public class LoginPage extends WebUtilityKeys {
     public LoginPage enterPassword(String element, String text) {
       
         
-        this.webEnterText_ByName(element, text);
+        this.webEnterText_ByXpath(element, text);
         captureStep("Entered Password");
         return this;
     }
 
     public LoginPage clickOnLogin(String element) {
         this.clickByXpath(element);
-        captureStep("Clicked Login Button");
+        captureStep("Click Login Button");
         return this;
     }
 
-    public LoginPage verifyEnterTimetracTitle(String element, String expectedText) {
+    public LoginPage VerifyInvalidError_message(String element, String expectedText) {
         this.assertTextByXpath(element, expectedText);
-        captureStep("Verified Enter Timetrack Title");
+        captureStep("Verified invalid login message");
         return this;
     }
+    
+    
+    
+    
+    public LoginPage verifyDashboardTitle(String element, String expectedText) {
+        this.assertTextByXpath(element, expectedText);
+        captureStep("Verified DashboardPage Title");
+        return this;
+    }
+    
+    
 }

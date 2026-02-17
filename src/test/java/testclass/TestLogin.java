@@ -13,9 +13,13 @@ public class TestLogin extends AdminBaseControl {
 
     LoginPage login;
 
-    public static String objectRepo = "/ObjectRepository/Login.properties";
-    public static String testData   = "/TestData/TestLogin.properties";
+    public static String objectRepologin = "/ObjectRepository/Login.properties";
+    public static String objectdashboard = "/ObjectRepository/Dashboard.properties";
+    
+    public static String testDatalogin   = "/TestData/TestLogin.properties";
+    public static String  testDataDashboard   = "/TestData/TestDashboard.properties";
     public static String filepath   = "/TestEnviornmentSetUp/BasicTestSetUp.properties";
+   
 
  
 
@@ -31,14 +35,14 @@ public class TestLogin extends AdminBaseControl {
     @Test(priority = 0, groups = { "Regression" })
     public void TC46043_verifyInvalidLoginFunctionality() throws Exception {
 
-        String usernameXpath   = WebUtilityKeys.readPropertyFiles(objectRepo, "username_xpath");
-        String passwordXpath   = WebUtilityKeys.readPropertyFiles(objectRepo, "password_xpath");
-        String loginBtnXpath   = WebUtilityKeys.readPropertyFiles(objectRepo, "login_btn_xpath");
-        String errorXpath      = WebUtilityKeys.readPropertyFiles(objectRepo, "invalidpassworderror_xpath");
+        String usernameXpath   = WebUtilityKeys.readPropertyFiles(objectRepologin, "username_xpath");
+        String passwordXpath   = WebUtilityKeys.readPropertyFiles(objectRepologin, "password_xpath");
+        String loginBtnXpath   = WebUtilityKeys.readPropertyFiles(objectRepologin, "login_btn_xpath");
+        String errorXpath      = WebUtilityKeys.readPropertyFiles(objectRepologin, "invalidpassworderror_xpath");
 
-        String username        = WebUtilityKeys.readPropertyFiles(testData, "username");
-        String invalidPassword = WebUtilityKeys.readPropertyFiles(testData, "Invalidpassword");
-        String errorMessage    = WebUtilityKeys.readPropertyFiles(testData, "Errormessage");
+        String username        = WebUtilityKeys.readPropertyFiles(testDatalogin , "username");
+        String invalidPassword = WebUtilityKeys.readPropertyFiles(testDatalogin , "Invalidpassword");
+        String errorMessage    = WebUtilityKeys.readPropertyFiles(testDatalogin , "Errormessage");
 
         WebUtilityKeys.createTestName(
                 "TC46043 verify invalid Login Functionality",
@@ -48,7 +52,7 @@ public class TestLogin extends AdminBaseControl {
         this.login.enterUsername(usernameXpath, username);
         this.login.enterPassword(passwordXpath, invalidPassword);
         this.login.clickOnLogin(loginBtnXpath);
-        this.login.verifyEnterTimetracTitle(errorXpath, errorMessage);
+        this.login.VerifyInvalidError_message(errorXpath, errorMessage);
     }
     
     
@@ -59,11 +63,11 @@ public class TestLogin extends AdminBaseControl {
         String usernameXpath   = WebUtilityKeys.readPropertyFiles(objectRepo, "username_xpath");
         String passwordXpath   = WebUtilityKeys.readPropertyFiles(objectRepo, "password_xpath");
         String loginBtnXpath   = WebUtilityKeys.readPropertyFiles(objectRepo, "login_btn_xpath");
-        String enterTimeXpath  = WebUtilityKeys.readPropertyFiles(objectRepo, "EnterTimetrack");
+        String dashboardXpath  = WebUtilityKeys.readPropertyFiles(objectdashboard, "dashboardXpath");
 
         String username        = WebUtilityKeys.readPropertyFiles(testData, "username");
         String password        = WebUtilityKeys.readPropertyFiles(testData, "password");
-        String enterTimeText   = WebUtilityKeys.readPropertyFiles(testData, "EnterTimetrack");
+        String dashboardtext   = WebUtilityKeys.readPropertyFiles(testDataDashboard, "dashboardtext");
 
         WebUtilityKeys.createTestName(
                 "TC46042 verify valid Login Functionality",
@@ -73,6 +77,6 @@ public class TestLogin extends AdminBaseControl {
         this.login.enterUsername(usernameXpath, username);
         this.login.enterPassword(passwordXpath, password);
         this.login.clickOnLogin(loginBtnXpath);
-        this.login.verifyEnterTimetracTitle(enterTimeXpath, enterTimeText);
+        this.login.verifyDashboardTitle( dashboardXpath, dashboardtext);
     }
 }

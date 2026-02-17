@@ -8,7 +8,7 @@
     <test name="login">
         <classes>
             <class name="testclass.TestLogin"/>      
-                 <class name="testclass.Testlogout"/>
+                 <class name="testclass.TestDashboard"/>
            
                 
         </classes>
