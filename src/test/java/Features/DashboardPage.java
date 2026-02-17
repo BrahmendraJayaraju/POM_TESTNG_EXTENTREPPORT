@@ -10,7 +10,7 @@ public class DashboardPage extends WebUtilityKeys {
     }
 
     public DashboardPage  clickOnAvatar(String element) {
-        this.clickByClassName(element);
+        this.clickByXpath(element);
         captureStep("Click on User Avatar");
         return this;
     }
