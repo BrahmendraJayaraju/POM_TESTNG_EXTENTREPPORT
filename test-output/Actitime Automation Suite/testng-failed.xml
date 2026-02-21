@@ -4,26 +4,15 @@
   <parameter name="browsername" value="chrome"/>
   <test thread-count="5" name="login(failed)">
     <classes>
-      <class name="testclass.TestDashboard">
+      <class name="com.orangeHRM.tests.LoginTest">
         <methods>
-          <include name="setupPages"/>
           <include name="closeDriver"/>
           <include name="addToReport"/>
-          <include name="beforeSuite"/>
-          <include name="TC46044_verifyLogoutFunctionality"/>
           <include name="PostConditionTestStatus"/>
-        </methods>
-      </class> <!-- testclass.TestDashboard -->
-      <class name="testclass.TestLogin">
-        <methods>
-          <include name="TC46043_verifyInvalidLoginFunctionality"/>
-          <include name="closeDriver"/>
-          <include name="setupPages"/>
-          <include name="addToReport"/>
+          <include name="TC46042_verifyValidLoginFunctionality"/>
           <include name="beforeSuite"/>
-          <include name="PostConditionTestStatus"/>
         </methods>
-      </class> <!-- testclass.TestLogin -->
+      </class> <!-- com.orangeHRM.tests.LoginTest -->
     </classes>
   </test> <!-- login(failed) -->
 </suite> <!-- Failed suite [Actitime Automation Suite] -->
