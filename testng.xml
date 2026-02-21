@@ -7,8 +7,8 @@
 
     <test name="login">
         <classes>
-            <class name="testclass.TestLogin"/>      
-                 <class name="testclass.TestDashboard"/>            
+            <class name="com.orangeHRM.tests.LoginTest"/>      
+            <class name="com.orangeHRM.tests.DashboardTest"/>            
         </classes>
     </test>
 
