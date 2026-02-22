@@ -157,43 +157,43 @@ public class WebUtilityKeys
 	    public void webEnterText_ById(String element, String text) {
 	        this.waitById(element);
 	        this.driver.findElement(By.id(element))
-	                          .sendKeys(new CharSequence[]{text});
+	                          .sendKeys(text);
 	    }
 
 	    public void webEnterText_ByName(String element, String text) {
 	        this.waitByName(element);
 	        this.driver.findElement(By.name(element))
-	                          .sendKeys(new CharSequence[]{text});
+	                          .sendKeys(text);
 	    }
 
 	    public void webEnterText_ByClassName(String element, String text) {
 	        this.waitByClassName(element);
 	        this.driver.findElement(By.className(element))
-	                          .sendKeys(new CharSequence[]{text});
+	                          .sendKeys(text);
 	    }
 
 	    public void webEnterText_ByXpath(String element, String text) {
 	        this.waitByXpath(element);
 	        this.driver.findElement(By.xpath(element))
-	                          .sendKeys(new CharSequence[]{text});
+	                          .sendKeys(text);
 	    }
 
 	    public void webEnterText_ByCss(String element, String text) {
 	        this.waitByCss(element);
 	        this.driver.findElement(By.cssSelector(element))
-	                          .sendKeys(new CharSequence[]{text});
+	                          .sendKeys(text);
 	    }
 
 	    public void webEnterText_ByLinkText(String element, String text) {
 	        this.waitByLinkText(element);
 	        this.driver.findElement(By.linkText(element))
-	                          .sendKeys(new CharSequence[]{text});
+	                          .sendKeys(text);
 	    }
 
 	    public void webEnterText_ByPartialLinkText(String element, String text) {
 	        this.waitByPartialLinkText(element);
 	        this.driver.findElement(By.partialLinkText(element))
-	                          .sendKeys(new CharSequence[]{text});
+	                          .sendKeys(text);
 	    }
 
 	    
