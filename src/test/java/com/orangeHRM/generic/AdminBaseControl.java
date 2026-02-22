@@ -26,7 +26,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 
 
-public class AdminBaseControl  implements Autoconstant  {
+public abstract class AdminBaseControl  implements Autoconstant  {
 	
     public static WebDriver driver;
     public static ExtentReports reports;
