@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-21T21:37:30 GMT-05:00" name="Actitime Automation Suite" finished-at="2026-02-21T21:37:39 GMT-05:00" duration-ms="9080">
+  <suite started-at="2026-02-21T22:18:09 GMT-05:00" name="Actitime Automation Suite" finished-at="2026-02-21T22:18:17 GMT-05:00" duration-ms="7961">
     <groups>
       <group name="Regression">
         <method signature="DashboardTest.TC46044_verifyLogoutFunctionality()[pri:0, instance:com.orangeHRM.tests.DashboardTest@5e5d171f]" name="TC46044_verifyLogoutFunctionality" class="com.orangeHRM.tests.DashboardTest"/>
@@ -10,13 +10,13 @@
         <method signature="LoginTest.TC46042_verifyValidLoginFunctionality()[pri:1, instance:com.orangeHRM.tests.LoginTest@fa4c865]" name="TC46042_verifyValidLoginFunctionality" class="com.orangeHRM.tests.LoginTest"/>
       </group> <!-- Regression -->
     </groups>
-    <test started-at="2026-02-21T21:37:30 GMT-05:00" name="login" finished-at="2026-02-21T21:37:39 GMT-05:00" duration-ms="9080">
+    <test started-at="2026-02-21T22:18:09 GMT-05:00" name="login" finished-at="2026-02-21T22:18:17 GMT-05:00" duration-ms="7961">
       <class name="com.orangeHRM.tests.DashboardTest">
-        <test-method signature="TC46044_verifyLogoutFunctionality()[pri:0, instance:com.orangeHRM.tests.DashboardTest@5e5d171f]" started-at="2026-02-21T21:37:36 GMT-05:00" name="TC46044_verifyLogoutFunctionality" finished-at="2026-02-21T21:37:39 GMT-05:00" duration-ms="2690" status="PASS">
+        <test-method signature="TC46044_verifyLogoutFunctionality()[pri:0, instance:com.orangeHRM.tests.DashboardTest@5e5d171f]" started-at="2026-02-21T22:18:15 GMT-05:00" name="TC46044_verifyLogoutFunctionality" finished-at="2026-02-21T22:18:17 GMT-05:00" duration-ms="1992" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC46044_verifyLogoutFunctionality -->
-        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:com.orangeHRM.tests.DashboardTest@5e5d171f]" started-at="2026-02-21T21:37:39 GMT-05:00" name="PostConditionTestStatus" finished-at="2026-02-21T21:37:39 GMT-05:00" duration-ms="65" status="PASS">
+        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:com.orangeHRM.tests.DashboardTest@5e5d171f]" started-at="2026-02-21T22:18:17 GMT-05:00" name="PostConditionTestStatus" finished-at="2026-02-21T22:18:17 GMT-05:00" duration-ms="54" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,13 +27,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PostConditionTestStatus -->
-        <test-method is-config="true" signature="addToReport()[pri:0, instance:com.orangeHRM.tests.DashboardTest@5e5d171f]" started-at="2026-02-21T21:37:39 GMT-05:00" name="addToReport" finished-at="2026-02-21T21:37:39 GMT-05:00" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="addToReport()[pri:0, instance:com.orangeHRM.tests.DashboardTest@5e5d171f]" started-at="2026-02-21T22:18:17 GMT-05:00" name="addToReport" finished-at="2026-02-21T22:18:17 GMT-05:00" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToReport -->
       </class> <!-- com.orangeHRM.tests.DashboardTest -->
       <class name="com.orangeHRM.tests.LoginTest">
-        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:com.orangeHRM.tests.LoginTest@fa4c865]" started-at="2026-02-21T21:37:25 GMT-05:00" name="beforeSuite" finished-at="2026-02-21T21:37:30 GMT-05:00" duration-ms="4407" status="PASS">
+        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:com.orangeHRM.tests.LoginTest@fa4c865]" started-at="2026-02-21T22:18:04 GMT-05:00" name="beforeSuite" finished-at="2026-02-21T22:18:09 GMT-05:00" duration-ms="4399" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -44,11 +44,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method signature="TC46043_verifyInvalidLoginFunctionality()[pri:0, instance:com.orangeHRM.tests.LoginTest@fa4c865]" started-at="2026-02-21T21:37:30 GMT-05:00" name="TC46043_verifyInvalidLoginFunctionality" finished-at="2026-02-21T21:37:33 GMT-05:00" duration-ms="3209" status="PASS">
+        <test-method signature="TC46043_verifyInvalidLoginFunctionality()[pri:0, instance:com.orangeHRM.tests.LoginTest@fa4c865]" started-at="2026-02-21T22:18:09 GMT-05:00" name="TC46043_verifyInvalidLoginFunctionality" finished-at="2026-02-21T22:18:12 GMT-05:00" duration-ms="3536" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC46043_verifyInvalidLoginFunctionality -->
-        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:com.orangeHRM.tests.LoginTest@fa4c865]" started-at="2026-02-21T21:37:33 GMT-05:00" name="PostConditionTestStatus" finished-at="2026-02-21T21:37:33 GMT-05:00" duration-ms="256" status="PASS">
+        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:com.orangeHRM.tests.LoginTest@fa4c865]" started-at="2026-02-21T22:18:12 GMT-05:00" name="PostConditionTestStatus" finished-at="2026-02-21T22:18:13 GMT-05:00" duration-ms="236" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -59,11 +59,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PostConditionTestStatus -->
-        <test-method signature="TC46042_verifyValidLoginFunctionality()[pri:1, instance:com.orangeHRM.tests.LoginTest@fa4c865]" started-at="2026-02-21T21:37:33 GMT-05:00" name="TC46042_verifyValidLoginFunctionality" finished-at="2026-02-21T21:37:36 GMT-05:00" duration-ms="2732" status="PASS">
+        <test-method signature="TC46042_verifyValidLoginFunctionality()[pri:1, instance:com.orangeHRM.tests.LoginTest@fa4c865]" started-at="2026-02-21T22:18:13 GMT-05:00" name="TC46042_verifyValidLoginFunctionality" finished-at="2026-02-21T22:18:15 GMT-05:00" duration-ms="2019" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC46042_verifyValidLoginFunctionality -->
-        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:com.orangeHRM.tests.LoginTest@fa4c865]" started-at="2026-02-21T21:37:36 GMT-05:00" name="PostConditionTestStatus" finished-at="2026-02-21T21:37:36 GMT-05:00" duration-ms="92" status="PASS">
+        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:com.orangeHRM.tests.LoginTest@fa4c865]" started-at="2026-02-21T22:18:15 GMT-05:00" name="PostConditionTestStatus" finished-at="2026-02-21T22:18:15 GMT-05:00" duration-ms="90" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -74,11 +74,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PostConditionTestStatus -->
-        <test-method is-config="true" signature="addToReport()[pri:0, instance:com.orangeHRM.tests.LoginTest@fa4c865]" started-at="2026-02-21T21:37:36 GMT-05:00" name="addToReport" finished-at="2026-02-21T21:37:36 GMT-05:00" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="addToReport()[pri:0, instance:com.orangeHRM.tests.LoginTest@fa4c865]" started-at="2026-02-21T22:18:15 GMT-05:00" name="addToReport" finished-at="2026-02-21T22:18:15 GMT-05:00" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToReport -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:com.orangeHRM.tests.LoginTest@fa4c865]" started-at="2026-02-21T21:37:39 GMT-05:00" name="closeDriver" finished-at="2026-02-21T21:37:39 GMT-05:00" duration-ms="107" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:com.orangeHRM.tests.LoginTest@fa4c865]" started-at="2026-02-21T22:18:17 GMT-05:00" name="closeDriver" finished-at="2026-02-21T22:18:17 GMT-05:00" duration-ms="100" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->

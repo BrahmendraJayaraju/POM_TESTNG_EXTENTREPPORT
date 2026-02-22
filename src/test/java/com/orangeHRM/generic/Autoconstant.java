@@ -20,11 +20,11 @@ public interface Autoconstant {
    
 	   
 
-	public static String setUpData = "/TestEnviornmentSetUp/BasicTestSetUp.properties";
-	public static String objectRepo = "/ObjectRepository/Login.properties";
+    String setUpData = "/TestEnviornmentSetUp/BasicTestSetUp.properties";
+	
 	
 
-	public static String testData = "/TestData/LoginTest.properties";
+
 	
 	
 
