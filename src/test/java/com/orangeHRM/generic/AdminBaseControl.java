@@ -29,7 +29,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 public class AdminBaseControl  {
 	String chrome_key = "webdriver.chrome.driver";
 
-	String chrome_value = "./Drivers/chromedriver";
+	String chrome_value = "./Drivers/chromedriver.exe";
 
 	String Gecko_key = "webdriver.gecko.driver";
 
@@ -73,11 +73,11 @@ public class AdminBaseControl  {
         	ChromeOptions options = new ChromeOptions();
 
 
-        	/*  options.addArguments("--headless=new");
+        	 options.addArguments("--headless=new");
               options.addArguments("--no-sandbox");
               options.addArguments("--disable-dev-shm-usage");
              options.addArguments("--disable-gpu");
-             options.addArguments("--window-size=1920,1080"); */
+             options.addArguments("--window-size=1920,1080"); 
              System.setProperty(chrome_key, chrome_value);
             driver = new ChromeDriver(options);
            
