@@ -78,7 +78,7 @@ public class AdminBaseControl  {
               options.addArguments("--disable-dev-shm-usage");
              options.addArguments("--disable-gpu");
              options.addArguments("--window-size=1920,1080"); 
-             System.setProperty(chrome_key, chrome_value);
+             //System.setProperty(chrome_key, chrome_value);
             driver = new ChromeDriver(options);
            
         }
