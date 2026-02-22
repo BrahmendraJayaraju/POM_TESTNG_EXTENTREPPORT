@@ -26,42 +26,15 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 
 
-public class AdminBaseControl  {
-	String chrome_key = "webdriver.chrome.driver";
-
-	String chrome_value = "./Drivers/chromedriver.exe";
-
-	String Gecko_key = "webdriver.gecko.driver";
-
-	String Gecko_value = "";
-
-	String Edge_key = "webdriver.edge.driver";
-
-	String Edge_value = "";
-
-
-
-	   
+public class AdminBaseControl  implements Autoconstant  {
+	
     public static WebDriver driver;
     public static ExtentReports reports;
     public static ExtentSparkReporter htmlReporter;
     public static ExtentTest mainTest;
     public static ExtentTest secondTest;
     public static ExtentTest DeviceTest;
-	public static String setUpData = "/TestEnviornmentSetUp/BasicTestSetUp.properties";
-	public static String objectRepo = "/ObjectRepository/Login.properties";
 	
-
-	public static String testData = "/TestData/LoginTest.properties";
-	String Concatenate=".";
-
-	// For Normal execution
-
-    public WebDriver getWebDriver()
-    {
-        return driver;
-    }
-    
     
     @Parameters("browsername")
     @BeforeSuite
@@ -179,7 +152,7 @@ public class AdminBaseControl  {
 
 			WebUtilityKeys.assignTestCategories(result.getTestClass().getRealClass().getName().substring(10));
 
-			String screenshot =WebUtilityKeys.generateScreenshot(this.getWebDriver(), name);
+			String screenshot =WebUtilityKeys.generateScreenshot(this.driver, name);
 
 			secondTest.log(Status.PASS, name, MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build());
 
@@ -191,7 +164,7 @@ public class AdminBaseControl  {
 
 			try {
 
-				String screenshot =WebUtilityKeys.generateScreenshot(this.getWebDriver(), name);
+				String screenshot =WebUtilityKeys.generateScreenshot(this.driver, name);
 				secondTest.log(Status.FAIL, name, MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build());
 
 				Reporter.log("screenshotname:" + screenshot, true);

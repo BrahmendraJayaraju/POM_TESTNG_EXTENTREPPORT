@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Actitime_Automation_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Actitime Automation Suite</span>
+              <span class="suite-name border-failed">Actitime Automation Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Actitime_Automation_Suite" class="hide-methods failed suite-Actitime_Automation_Suite"> (hide)</a> <!-- hide-methods failed suite-Actitime_Automation_Suite -->
+                      <a href="#" panel-name="suite-Actitime_Automation_Suite" class="show-methods failed suite-Actitime_Automation_Suite"> (show)</a> <!-- show-methods failed suite-Actitime_Automation_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Actitime_Automation_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Actitime_Automation_Suite" title="com.orangeHRM.tests.LoginTest" class="method navigator-link" hash-for-method="TC46042_verifyValidLoginFunctionality">TC46042_verifyValidLoginFunctionality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Actitime_Automation_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,11 +115,6 @@
                       <a href="#" panel-name="suite-Actitime_Automation_Suite" class="show-methods passed suite-Actitime_Automation_Suite"> (show)</a> <!-- show-methods passed suite-Actitime_Automation_Suite -->
                     </span>
                     <div class="method-list-content passed suite-Actitime_Automation_Suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Actitime_Automation_Suite" title="com.orangeHRM.tests.LoginTest" class="method navigator-link" hash-for-method="TC46042_verifyValidLoginFunctionality">TC46042_verifyValidLoginFunctionality</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Actitime_Automation_Suite" title="com.orangeHRM.tests.LoginTest" class="method navigator-link" hash-for-method="TC46043_verifyInvalidLoginFunctionality">TC46043_verifyInvalidLoginFunctionality</a> <!-- method navigator-link -->
@@ -128,6 +137,28 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Actitime_Automation_Suite" class="panel Actitime_Automation_Suite">
+          <div class="suite-Actitime_Automation_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.orangeHRM.tests.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC46042_verifyValidLoginFunctionality">
+                  </a> <!-- TC46042_verifyValidLoginFunctionality -->
+                  <span class="method-name">TC46042_verifyValidLoginFunctionality</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Dashboardd] but found [Dashboard]
+	at com.orangeHRM.generic.WebUtilityKeys.assertTextByXpath(WebUtilityKeys.java:314)
+	at com.orangeHRM.pages.LoginPage.verifyDashboardTitle(LoginPage.java:46)
+	at com.orangeHRM.tests.LoginTest.TC46042_verifyValidLoginFunctionality(LoginTest.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Actitime_Automation_Suite-class-failed -->
           <div class="suite-Actitime_Automation_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -149,13 +180,6 @@
               <span class="class-name">com.orangeHRM.tests.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC46042_verifyValidLoginFunctionality">
-                  </a> <!-- TC46042_verifyValidLoginFunctionality -->
-                  <span class="method-name">TC46042_verifyValidLoginFunctionality</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="TC46043_verifyInvalidLoginFunctionality">
@@ -237,22 +261,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC46044_verifyLogoutFunctionality')
-data.setCell(0, 2, 'com.orangeHRM.tests.DashboardTest')
-data.setCell(0, 3, 18634);
+data.setCell(0, 1, 'TC46043_verifyInvalidLoginFunctionality')
+data.setCell(0, 2, 'com.orangeHRM.tests.LoginTest')
+data.setCell(0, 3, 5175);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TC46043_verifyInvalidLoginFunctionality')
-data.setCell(1, 2, 'com.orangeHRM.tests.LoginTest')
-data.setCell(1, 3, 11035);
+data.setCell(1, 1, 'TC46044_verifyLogoutFunctionality')
+data.setCell(1, 2, 'com.orangeHRM.tests.DashboardTest')
+data.setCell(1, 3, 3685);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'TC46042_verifyValidLoginFunctionality')
 data.setCell(2, 2, 'com.orangeHRM.tests.LoginTest')
-data.setCell(2, 3, 8818);
+data.setCell(2, 3, 2409);
 window.suiteTableData['Actitime_Automation_Suite']= { tableData: data, tableDiv: 'times-div-Actitime_Automation_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 38 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Actitime_Automation_Suite">
               </div> <!-- times-div-Actitime_Automation_Suite -->
             </div> <!-- times-div -->
@@ -294,45 +318,47 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">TC46043_verifyInvalidLoginFunctionality</span>
-                <span class="method-start">6173 ms</span>
+                <span class="method-start">9899 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">PostConditionTestStatus([TestResult name=TC46043_verifyInvalidLoginFunctionality status=SUCCESS method=LoginTest.TC46043_ver...)</span>
-                <span class="method-start">17210 ms</span>
+                <span class="method-start">15076 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">TC46042_verifyValidLoginFunctionality</span>
-                <span class="method-start">17466 ms</span>
+                <span class="method-start">15330 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">PostConditionTestStatus([TestResult name=TC46042_verifyValidLoginFunctionality status=SUCCESS method=LoginTest.TC46042_verif...)</span>
-                <span class="method-start">26285 ms</span>
+                <span class="method-name">PostConditionTestStatus([TestResult name=TC46042_verifyValidLoginFunctionality status=FAILURE method=LoginTest.TC46042_verif...)</span>
+                <span class="method-start">17741 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">addToReport</span>
-                <span class="method-start">26382 ms</span>
+                <span class="method-start">17831 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.orangeHRM.tests.DashboardTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">TC46044_verifyLogoutFunctionality</span>
-                <span class="method-start">26390 ms</span>
+                <span class="method-start">17839 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">PostConditionTestStatus([TestResult name=TC46044_verifyLogoutFunctionality status=SUCCESS method=DashboardTest.TC46044_verif...)</span>
-                <span class="method-start">45025 ms</span>
+                <span class="method-start">21525 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">addToReport</span>
-                <span class="method-start">45086 ms</span>
+                <span class="method-start">21584 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.orangeHRM.tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">45112 ms</span>
+                <span class="method-start">21612 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

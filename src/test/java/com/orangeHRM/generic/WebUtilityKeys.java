@@ -26,6 +26,7 @@ public class WebUtilityKeys
 	    {
 	        this.driver = driver;
 	        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+	        
 
 	    }
 	    
