@@ -12,6 +12,7 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
@@ -29,6 +30,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 public abstract class AdminBaseControl  implements Autoconstant  {
 	
     public static WebDriver driver;
+    
     public static ExtentReports reports;
     public static ExtentSparkReporter htmlReporter;
     public static ExtentTest mainTest;
@@ -36,110 +38,89 @@ public abstract class AdminBaseControl  implements Autoconstant  {
     public static ExtentTest DeviceTest;
 	
     
-    @Parameters("browsername")
+
+
     @BeforeSuite
-    public void beforeSuite(@Optional("chrome") String browsername) throws Exception {
+    public void beforeSuite() throws Exception {
+
+        String reportPath = "Project_Report/ExtentReport.html";
+
+        reports = new ExtentReports();
+        htmlReporter = new ExtentSparkReporter(reportPath);
+
+        htmlReporter.config().setTheme(Theme.DARK);
+        htmlReporter.config().setDocumentTitle("Actitime TestReport");
+        htmlReporter.config().setTimelineEnabled(true);
+
+        reports.attachReporter(htmlReporter);
+
+        String scope = WebUtilityKeys.readPropertyFiles(setUpData, "TestingScope");
+
+        if (scope.equals("SanityTestCases")) {
+            htmlReporter.config().setReportName(
+                WebUtilityKeys.readPropertyFiles(setUpData, "SanityReportName"));
+            reports.setSystemInfo("No. Of Test cases",
+                WebUtilityKeys.readPropertyFiles(setUpData, "SanityTestCases"));
+        } 
+        else if (scope.equals("RegressionTestCases")) {
+            htmlReporter.config().setReportName(
+                WebUtilityKeys.readPropertyFiles(setUpData, "RegressionReportName"));
+            reports.setSystemInfo("No. Of Test cases",
+                WebUtilityKeys.readPropertyFiles(setUpData, "RegressionTestCases"));
+        } 
+        else if (scope.equals("UserStories")) {
+            htmlReporter.config().setReportName(
+                WebUtilityKeys.readPropertyFiles(setUpData, "FunctionalName"));
+            reports.setSystemInfo("No. Of Test cases",
+                WebUtilityKeys.readPropertyFiles(setUpData, "FuctionalTestcases"));
+        }
+
+        reports.setSystemInfo("Testing Scope", scope);
+        reports.setSystemInfo("UserName", WebUtilityKeys.readPropertyFiles(setUpData, "UserName"));
+        reports.setSystemInfo("OS", WebUtilityKeys.readPropertyFiles(setUpData, "OS"));
+        reports.setSystemInfo("Environment", WebUtilityKeys.readPropertyFiles(setUpData, "Environment"));
+        reports.setSystemInfo("Device", WebUtilityKeys.readPropertyFiles(setUpData, "Device"));
+        reports.setSystemInfo("BrowserName", WebUtilityKeys.readPropertyFiles(setUpData, "Browser"));
+
+        reports.setReportUsesManualConfiguration(false);
+    }
+	
+
+	
+	
+    @Parameters("browsername")
+    @BeforeMethod
+    public void setUp(@Optional("chrome") String browsername) throws Exception {
 
         if (browsername.equalsIgnoreCase("chrome")) {
 
-   
-        	ChromeOptions options = new ChromeOptions();
+           /*ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless=new");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--window-size=1920,1080");
+            */
 
-
-        	 options.addArguments("--headless=new");
-              options.addArguments("--no-sandbox");
-              options.addArguments("--disable-dev-shm-usage");
-             options.addArguments("--disable-gpu");
-             options.addArguments("--window-size=1920,1080"); 
-             //System.setProperty(chrome_key, chrome_value);
-            driver = new ChromeDriver(options);
-           
+            driver = new ChromeDriver();
         }
-    
+        else if (browsername.equalsIgnoreCase("firefox")) {
+            System.setProperty(Gecko_key, Gecko_value);
+            driver = new FirefoxDriver();
+        }
+        else if (browsername.equalsIgnoreCase("edge")) {
+            System.setProperty(Edge_key, Edge_value);
+            driver = new EdgeDriver();
+        }
+        else {
+            throw new Exception("Browser is not correct: " + browsername);
+        }
 
-	    else if (browsername.equalsIgnoreCase("firefox")) {
+        driver.manage().window().maximize();
 
-	        System.setProperty(Gecko_key, Gecko_value);
-	        driver = new FirefoxDriver();
-
-	    }
-	    else if (browsername.equalsIgnoreCase("edge")) {
-
-	        System.setProperty(Edge_key, Edge_value);
-	        driver = new EdgeDriver();
-
-	    }
-	    else {
-	        throw new Exception("Browser is not correct: " + browsername);
-	    }
-
-
-
-	
-	    driver.manage().window().maximize();
-
-	    String url = WebUtilityKeys.readPropertyFiles(setUpData, "URL");
-	    driver.get(url);
-	    
-	    /* ================= EXTENT REPORT SETUP ================= */
-
-	    String reportPath = "Project_Report/ExtentReport.html";
-
-	    reports = new ExtentReports();
-	    htmlReporter = new ExtentSparkReporter(reportPath);
-
-	
-	   	
-	       
-	      
-	   	htmlReporter.config().setTheme(Theme.DARK);
-	   	htmlReporter.config().setDocumentTitle("Actitime TestReport");
-	   	htmlReporter.config().setTimelineEnabled(true);
-	   	
-	   	
-	   
-	   	reports.attachReporter(htmlReporter);
-	   	
-	   	
-	   	
-	   	if
-	       (WebUtilityKeys.readPropertyFiles(setUpData,"TestingScope").equals("SanityTestCases"))
-	       {
-	           htmlReporter.config().setReportName(WebUtilityKeys.readPropertyFiles(setUpData,"SanityReportName"));
-	           reports.setSystemInfo("No. Of Test cases", WebUtilityKeys.readPropertyFiles(setUpData,"SanityTestCases"));
-	           reports.setSystemInfo("Testing Scope", WebUtilityKeys.readPropertyFiles(setUpData,"TestingScope"));
-	       }
-	       else if(WebUtilityKeys.readPropertyFiles(setUpData,"TestingScope").equals("RegressionTestCases"))
-	       {
-	           htmlReporter.config().setReportName(WebUtilityKeys.readPropertyFiles(setUpData,"RegressionReportName"));
-	           reports.setSystemInfo("No. Of Test cases",WebUtilityKeys.readPropertyFiles(setUpData,"RegressionTestCases"));
-	           reports.setSystemInfo("Testing Scope", WebUtilityKeys.readPropertyFiles(setUpData,"TestingScope"));
-	       }
-
-	       else if(WebUtilityKeys.readPropertyFiles(setUpData,"TestingScope").equals("UserStories"))
-	       {
-	           htmlReporter.config().setReportName(WebUtilityKeys.readPropertyFiles(setUpData,"FunctionalName"));
-	           reports.setSystemInfo("No. Of Test cases", WebUtilityKeys.readPropertyFiles(setUpData,"FuctionalTestcases"));
-	           reports.setSystemInfo("Testing Scope", WebUtilityKeys.readPropertyFiles(setUpData,"TestingScope"));
-	       }
-	   	
-	   	
-	   	reports.setSystemInfo("UserName", WebUtilityKeys.readPropertyFiles(setUpData,"UserName"));
-	       reports.setSystemInfo("OS", WebUtilityKeys.readPropertyFiles(setUpData,"OS"));
-	       reports.setSystemInfo("Environment", WebUtilityKeys.readPropertyFiles(setUpData,"Environment"));
-	       reports.setSystemInfo("Device", WebUtilityKeys.readPropertyFiles(setUpData,"Device"));
-	   	
-	       reports.setSystemInfo("BrowserName", WebUtilityKeys.readPropertyFiles(setUpData,"Browser")); 
-	       reports.setReportUsesManualConfiguration(false);
-	}
-
-
-	
-	
-
-	
-	
-	
+        String url = WebUtilityKeys.readPropertyFiles(setUpData, "URL");
+        driver.get(url);
+    }
 	
 
 	@AfterMethod
@@ -191,20 +172,18 @@ public abstract class AdminBaseControl  implements Autoconstant  {
 
 		}
 
-		reports.flush();
+		
+	    driver.quit();
 
 	}
 
-	@AfterClass
-	public void addToReport() {
-		reports.flush();
 
-	}
 
     @AfterSuite
     public void closeDriver()
     {
-        driver.quit();
+    	reports.flush();
+    
     }
     
 	
