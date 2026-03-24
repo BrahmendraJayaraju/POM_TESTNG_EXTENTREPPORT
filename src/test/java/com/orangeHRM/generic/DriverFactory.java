@@ -18,9 +18,6 @@ import net.bytebuddy.dynamic.scaffold.MethodRegistry.Handler.ForAbstractMethod;
 
 public  class DriverFactory 
 {
-
-	
-	
 	
 	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 	
@@ -29,8 +26,6 @@ public  class DriverFactory
 	
 	ThreadLocal<RemoteWebDriver> drivers= new ThreadLocal<RemoteWebDriver>();
 	
-	
-
 	
 	
 	public static void setDriver(WebDriver WebDriver)
@@ -46,11 +41,17 @@ public  class DriverFactory
 	 
 	 
 	
-	public  static void removeDriver()
+	public  static void quitDriver()
 	{
 		driver.get().quit();
 		driver.remove();
 	}
+	
+	
+	
+	
+	
+	
 	
 	
 	//For Test in Extent Reports Testnames

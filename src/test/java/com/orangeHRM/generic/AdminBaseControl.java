@@ -94,29 +94,34 @@ public abstract class AdminBaseControl  implements Autoconstant  {
 
         if (browsername.equalsIgnoreCase("chrome")) {
 
-           /*ChromeOptions options = new ChromeOptions();
+           ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless=new");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
             options.addArguments("--disable-gpu");
             options.addArguments("--window-size=1920,1080");
-            */
+            
 
-            driver = new ChromeDriver();
+            driver = new ChromeDriver( options);
+            
+            DriverFactory.setDriver(driver);
         }
         else if (browsername.equalsIgnoreCase("firefox")) {
-            System.setProperty(Gecko_key, Gecko_value);
+          
             driver = new FirefoxDriver();
+            DriverFactory.setDriver(driver);
         }
         else if (browsername.equalsIgnoreCase("edge")) {
-            System.setProperty(Edge_key, Edge_value);
+           
             driver = new EdgeDriver();
+            DriverFactory.setDriver(driver);
         }
         else {
             throw new Exception("Browser is not correct: " + browsername);
         }
 
-        driver.manage().window().maximize();
+       driver= DriverFactory.getDriver() ;
+       driver.manage().window().maximize();
 
         String url = WebUtilityKeys.readPropertyFiles(setUpData, "URL");
         driver.get(url);
@@ -173,7 +178,7 @@ public abstract class AdminBaseControl  implements Autoconstant  {
 		}
 
 		
-	    driver.quit();
+		DriverFactory.quitDriver();
 
 	}
 
