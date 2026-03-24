@@ -13,6 +13,8 @@ public class DashboardPage extends WebUtilityKeys {
 	    public static String objectdashboard = "/ObjectRepository/Dashboard.properties";
 	    public static String objectRepologin = "/ObjectRepository/login.properties";
 	    public static String testDatalogin  = "/TestData/TestLogin.properties";
+	    
+	    String headerText  = WebUtilityKeys.readPropertyFiles(testDatalogin, "loginheadertext");
 
 	    String avatarXpath = WebUtilityKeys.readPropertyFiles(objectRepoDashboard, "avatar_xpath");
 	    String logoutXpath = WebUtilityKeys.readPropertyFiles(objectRepoDashboard, "logout_xpath");
@@ -20,7 +22,7 @@ public class DashboardPage extends WebUtilityKeys {
 	    
 	    
 
-	        String headerText  = WebUtilityKeys.readPropertyFiles(testDatalogin, "loginheadertext");
+	       
 	    
 
     public DashboardPage (WebDriver driver) {

@@ -25,7 +25,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import net.bytebuddy.dynamic.scaffold.MethodRegistry.Handler.ForAbstractMethod;
 
 
-public class TestListeners  extends AdminBaseControl implements ITestListener
+public class TestListeners  implements ITestListener
 
 
 {
