@@ -1,16 +1,12 @@
 package com.orangeHRM.pages;
 import org.openqa.selenium.WebDriver;
 
+import com.orangeHRM.generic.Autoconstant;
 import com.orangeHRM.generic.WebUtilityKeys;
 
-public class LoginPage extends WebUtilityKeys {
+public class LoginPage extends WebUtilityKeys implements Autoconstant{
 	
-	  public static String objectRepologin = "/ObjectRepository/Login.properties";
-	    public static String objectdashboard = "/ObjectRepository/Dashboard.properties";
-	    
-	    public static String testDatalogin   = "/TestData/TestLogin.properties";
-	    public static String  testDataDashboard   = "/TestData/TestDashboard.properties";
-	    public static String filepath   = "/TestEnviornmentSetUp/BasicTestSetUp.properties";
+	
 	
 	
 	

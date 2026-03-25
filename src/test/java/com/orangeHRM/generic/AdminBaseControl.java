@@ -43,7 +43,7 @@ public abstract class AdminBaseControl  implements Autoconstant  {
     @BeforeSuite
     public void beforeSuite() throws Exception {
 
-        String reportPath = "Project_Report/ExtentReport.html";
+        
 
         reports = new ExtentReports();
         htmlReporter = new ExtentSparkReporter(reportPath);
