@@ -2,17 +2,14 @@ package com.orangeHRM.pages;
 
 import org.openqa.selenium.WebDriver;
 
+import com.orangeHRM.generic.Autoconstant;
 import com.orangeHRM.generic.WebUtilityKeys;
  
-public class DashboardPage extends WebUtilityKeys {
+public class DashboardPage extends WebUtilityKeys implements Autoconstant {
 	
 	
 	
-	  public static String objectRepoDashboard = "/ObjectRepository/Dashboard.properties";
-
-	    public static String objectdashboard = "/ObjectRepository/Dashboard.properties";
-	    public static String objectRepologin = "/ObjectRepository/login.properties";
-	    public static String testDatalogin  = "/TestData/TestLogin.properties";
+	
 	    
 	    String headerText  = WebUtilityKeys.readPropertyFiles(testDatalogin, "loginheadertext");
 
