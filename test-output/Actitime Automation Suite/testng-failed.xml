@@ -13,15 +13,6 @@
           <include name="beforeSuite"/>
         </methods>
       </class> <!-- com.orangeHRM.tests.ValidLoginTest -->
-      <class name="com.orangeHRM.tests.logouttTest">
-        <methods>
-          <include name="closeDriver"/>
-          <include name="TC46044_verifyLogoutFunctionality"/>
-          <include name="setUp"/>
-          <include name="PostConditionTestStatus"/>
-          <include name="beforeSuite"/>
-        </methods>
-      </class> <!-- com.orangeHRM.tests.logouttTest -->
     </classes>
   </test> <!-- login(failed) -->
 </suite> <!-- Failed suite [Actitime Automation Suite] -->

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-25T00:50:30 GMT-04:00" name="Actitime Automation Suite" finished-at="2026-03-25T00:51:11 GMT-04:00" duration-ms="40648">
+  <suite started-at="2026-04-28T13:27:08 GMT-04:00" name="Actitime Automation Suite" finished-at="2026-04-28T13:28:06 GMT-04:00" duration-ms="58067">
     <groups>
       <group name="Regression">
         <method signature="InvalidLoginTest.TC46043_verifyInvalidLoginFunctionality()[pri:0, instance:com.orangeHRM.tests.InvalidLoginTest@247bddad]" name="TC46043_verifyInvalidLoginFunctionality" class="com.orangeHRM.tests.InvalidLoginTest"/>
@@ -10,9 +10,9 @@
         <method signature="ValidLoginTest.TC46042_verifyValidLoginFunctionality()[pri:1, instance:com.orangeHRM.tests.ValidLoginTest@41a2befb]" name="TC46042_verifyValidLoginFunctionality" class="com.orangeHRM.tests.ValidLoginTest"/>
       </group> <!-- Regression -->
     </groups>
-    <test started-at="2026-03-25T00:50:30 GMT-04:00" name="login" finished-at="2026-03-25T00:51:11 GMT-04:00" duration-ms="40648">
+    <test started-at="2026-04-28T13:27:08 GMT-04:00" name="login" finished-at="2026-04-28T13:28:06 GMT-04:00" duration-ms="58067">
       <class name="com.orangeHRM.tests.ValidLoginTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.orangeHRM.tests.ValidLoginTest@41a2befb]" started-at="2026-03-25T00:50:57 GMT-04:00" name="setUp" finished-at="2026-03-25T00:51:01 GMT-04:00" duration-ms="3676" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.orangeHRM.tests.ValidLoginTest@41a2befb]" started-at="2026-04-28T13:27:59 GMT-04:00" name="setUp" finished-at="2026-04-28T13:28:05 GMT-04:00" duration-ms="5843" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,15 +23,70 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC46042_verifyValidLoginFunctionality()[pri:1, instance:com.orangeHRM.tests.ValidLoginTest@41a2befb]" started-at="2026-03-25T00:51:01 GMT-04:00" name="TC46042_verifyValidLoginFunctionality" finished-at="2026-03-25T00:51:10 GMT-04:00" duration-ms="9326" status="PASS">
+        <test-method signature="TC46042_verifyValidLoginFunctionality()[pri:1, instance:com.orangeHRM.tests.ValidLoginTest@41a2befb]" started-at="2026-04-28T13:28:05 GMT-04:00" name="TC46042_verifyValidLoginFunctionality" finished-at="2026-04-28T13:28:06 GMT-04:00" duration-ms="1110" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[SendKeys failed -> no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=147.0.7727.102)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9c47b46af47351a07288d2badf7f1198, findElement {value=//input[@name='username'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: /var/folders/jt/ltwwk1l94_z...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49708}, goog:processID: 58319, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49708/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9c47b46af47351a07288d2badf7f1198]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: SendKeys failed -> no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=147.0.7727.102)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9c47b46af47351a07288d2badf7f1198, findElement {value=//input[@name='username'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: /var/folders/jt/ltwwk1l94_z...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49708}, goog:processID: 58319, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49708/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9c47b46af47351a07288d2badf7f1198
+at org.testng.Assert.fail(Assert.java:111)
+at com.orangeHRM.generic.WebUtilityKeys.webEnterText_ByXpath(WebUtilityKeys.java:92)
+at com.orangeHRM.pages.LoginPage.enterUsername(LoginPage.java:45)
+at com.orangeHRM.tests.ValidLoginTest.TC46042_verifyValidLoginFunctionality(ValidLoginTest.java:37)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC46042_verifyValidLoginFunctionality -->
-        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:com.orangeHRM.tests.ValidLoginTest@41a2befb]" started-at="2026-03-25T00:51:10 GMT-04:00" name="PostConditionTestStatus" finished-at="2026-03-25T00:51:11 GMT-04:00" duration-ms="674" status="PASS">
+        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:com.orangeHRM.tests.ValidLoginTest@41a2befb]" started-at="2026-04-28T13:28:06 GMT-04:00" name="PostConditionTestStatus" finished-at="2026-04-28T13:28:06 GMT-04:00" duration-ms="94" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC46042_verifyValidLoginFunctionality status=SUCCESS method=ValidLoginTest.TC46042_verifyValidLoginFunctionality()[pri:1, instance:com.orangeHRM.tests.ValidLoginTest@41a2befb] output={null}]]]>
+                <![CDATA[[TestResult name=TC46042_verifyValidLoginFunctionality status=FAILURE method=ValidLoginTest.TC46042_verifyValidLoginFunctionality()[pri:1, instance:com.orangeHRM.tests.ValidLoginTest@41a2befb] output={null}]]]>
               </value>
             </param>
           </params>
@@ -40,11 +95,11 @@
         </test-method> <!-- PostConditionTestStatus -->
       </class> <!-- com.orangeHRM.tests.ValidLoginTest -->
       <class name="com.orangeHRM.tests.InvalidLoginTest">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.orangeHRM.tests.InvalidLoginTest@247bddad]" started-at="2026-03-25T00:50:30 GMT-04:00" name="beforeSuite" finished-at="2026-03-25T00:50:30 GMT-04:00" duration-ms="151" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.orangeHRM.tests.InvalidLoginTest@247bddad]" started-at="2026-04-28T13:27:07 GMT-04:00" name="beforeSuite" finished-at="2026-04-28T13:27:08 GMT-04:00" duration-ms="429" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.orangeHRM.tests.InvalidLoginTest@247bddad]" started-at="2026-03-25T00:50:30 GMT-04:00" name="setUp" finished-at="2026-03-25T00:50:35 GMT-04:00" duration-ms="4715" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.orangeHRM.tests.InvalidLoginTest@247bddad]" started-at="2026-04-28T13:27:08 GMT-04:00" name="setUp" finished-at="2026-04-28T13:27:18 GMT-04:00" duration-ms="10164" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -55,11 +110,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC46043_verifyInvalidLoginFunctionality()[pri:0, instance:com.orangeHRM.tests.InvalidLoginTest@247bddad]" started-at="2026-03-25T00:50:35 GMT-04:00" name="TC46043_verifyInvalidLoginFunctionality" finished-at="2026-03-25T00:50:42 GMT-04:00" duration-ms="6900" status="PASS">
+        <test-method signature="TC46043_verifyInvalidLoginFunctionality()[pri:0, instance:com.orangeHRM.tests.InvalidLoginTest@247bddad]" started-at="2026-04-28T13:27:18 GMT-04:00" name="TC46043_verifyInvalidLoginFunctionality" finished-at="2026-04-28T13:27:26 GMT-04:00" duration-ms="7625" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC46043_verifyInvalidLoginFunctionality -->
-        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:com.orangeHRM.tests.InvalidLoginTest@247bddad]" started-at="2026-03-25T00:50:42 GMT-04:00" name="PostConditionTestStatus" finished-at="2026-03-25T00:50:42 GMT-04:00" duration-ms="669" status="PASS">
+        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:com.orangeHRM.tests.InvalidLoginTest@247bddad]" started-at="2026-04-28T13:27:26 GMT-04:00" name="PostConditionTestStatus" finished-at="2026-04-28T13:27:26 GMT-04:00" duration-ms="215" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -70,13 +125,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PostConditionTestStatus -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:com.orangeHRM.tests.InvalidLoginTest@247bddad]" started-at="2026-03-25T00:51:11 GMT-04:00" name="closeDriver" finished-at="2026-03-25T00:51:11 GMT-04:00" duration-ms="186" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:com.orangeHRM.tests.InvalidLoginTest@247bddad]" started-at="2026-04-28T13:28:06 GMT-04:00" name="closeDriver" finished-at="2026-04-28T13:28:06 GMT-04:00" duration-ms="204" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
       </class> <!-- com.orangeHRM.tests.InvalidLoginTest -->
       <class name="com.orangeHRM.tests.logouttTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.orangeHRM.tests.logouttTest@77f1baf5]" started-at="2026-03-25T00:50:42 GMT-04:00" name="setUp" finished-at="2026-03-25T00:50:46 GMT-04:00" duration-ms="3400" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.orangeHRM.tests.logouttTest@77f1baf5]" started-at="2026-04-28T13:27:26 GMT-04:00" name="setUp" finished-at="2026-04-28T13:27:31 GMT-04:00" duration-ms="5256" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -87,11 +142,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC46044_verifyLogoutFunctionality()[pri:0, instance:com.orangeHRM.tests.logouttTest@77f1baf5]" started-at="2026-03-25T00:50:46 GMT-04:00" name="TC46044_verifyLogoutFunctionality" finished-at="2026-03-25T00:50:56 GMT-04:00" duration-ms="10615" status="PASS">
+        <test-method signature="TC46044_verifyLogoutFunctionality()[pri:0, instance:com.orangeHRM.tests.logouttTest@77f1baf5]" started-at="2026-04-28T13:27:31 GMT-04:00" name="TC46044_verifyLogoutFunctionality" finished-at="2026-04-28T13:27:49 GMT-04:00" duration-ms="17447" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC46044_verifyLogoutFunctionality -->
-        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:com.orangeHRM.tests.logouttTest@77f1baf5]" started-at="2026-03-25T00:50:56 GMT-04:00" name="PostConditionTestStatus" finished-at="2026-03-25T00:50:57 GMT-04:00" duration-ms="650" status="PASS">
+        <test-method is-config="true" signature="PostConditionTestStatus(org.testng.ITestResult)[pri:0, instance:com.orangeHRM.tests.logouttTest@77f1baf5]" started-at="2026-04-28T13:27:49 GMT-04:00" name="PostConditionTestStatus" finished-at="2026-04-28T13:27:59 GMT-04:00" duration-ms="10228" status="PASS">
           <params>
             <param index="0">
               <value>
