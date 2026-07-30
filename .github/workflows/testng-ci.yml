@@ -54,11 +54,7 @@ jobs:
             exit 1
           }
 
-      # Install ChromeDriver
-      - name: Install ChromeDriver
-        uses: nanasess/setup-chromedriver@v1
-        with:
-          chrome-version: latest
+   
 
       # Run your TestNG suite (this generates the Extent report)
       - name: Execute TestNG Suite
