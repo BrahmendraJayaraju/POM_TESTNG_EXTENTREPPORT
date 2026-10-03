@@ -18,7 +18,7 @@ public class InvalidLoginTest extends AdminBaseControl{
       
 
         WebUtilityKeys.createTestName(
-                "TC46043 verify invalid Login Functionalit",
+                "TC46043 verify invalid Login Functionality",
                 "TesterName=brahmendra.jayaraju@gmail.com"
         );
         
