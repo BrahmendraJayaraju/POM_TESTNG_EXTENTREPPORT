@@ -8,8 +8,6 @@ import com.orangeHRM.pages.LoginPage;
 
 public class InvalidLoginTest extends AdminBaseControl{
 	
-	
-
 
    
 	
@@ -20,7 +18,7 @@ public class InvalidLoginTest extends AdminBaseControl{
       
 
         WebUtilityKeys.createTestName(
-                "TC46043 verify invalid Login Functionality",
+                "TC46043 verify invalid Login Functionalit",
                 "TesterName=brahmendra.jayaraju@gmail.com"
         );
         
